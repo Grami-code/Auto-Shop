@@ -1,0 +1,16 @@
+package com.serviceauto.database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class BazaDate {
+
+    private static final String URL = "jdbc:mysql://localhost:3306/serviceauto"; // numele bazei tale
+    private static final String USER = "root";  // userul MySQL
+    private static final String PASS = "Mysql1243."; // parola MySQL
+
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASS);
+    }
+}
